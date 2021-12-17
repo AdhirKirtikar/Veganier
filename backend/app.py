@@ -39,7 +39,7 @@ def replaceHtml(page_html):
     dict['butter'] = 'plant butter'
 
     for key, value in dict.items():
-        for currentTag in page_html.findAll(['p', 'a','h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'h7', 'li','text']):
+        for currentTag in page_html.findAll(['p', 'a','h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'h7', 'li','text', 'span']):
             if currentTag.text != None and len(currentTag.contents) != 2: # -_-
                 if re.search(key, currentTag.text):
                     split_string = re.split(key, currentTag.text)
